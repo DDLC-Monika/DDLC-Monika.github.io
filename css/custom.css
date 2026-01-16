@@ -1,17 +1,4 @@
-/* --- 首页大图完整显示补丁 Start --- */
+/* 让所有顶部大图都优先显示最上面 */
 #page-header {
-  /* 让背景图片完整显示，不裁剪 */
-  background-size: contain !important;
-  
-  /* 图片居中显示 */
-  background-position: center center !important;
-  
-  /* 不重复平铺图片 */
-  background-repeat: no-repeat !important;
-  
-  /* 可选：如果你不想看到图片周围有留白，想强制拉伸填满（可能会变形），
-     请删除上面三行，只保留下面这一行：
-  background-size: 100% 100% !important; 
-  */
+  background-position: top center !important;
 }
-/* --- 首页大图完整显示补丁 End --- */
