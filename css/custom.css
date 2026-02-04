@@ -2,3 +2,14 @@
 #page-header {
   background-position: top center !important;
 }
+
+/* 修改文章页（Post）头部的高度 */
+#page-header.post-bg {
+    height: 55rem !important; /* 默认通常是 20rem 左右，你可以改为 28rem, 35rem 或者 400px */
+}
+
+/* 如果你也想修改首页（Home）的头部高度 */
+/* 注意：首页通常在配置里开启 full_page: true 就是全屏了 */
+#page-header:not(.not-top-img):not(.post-bg) {
+    height: 100vh !important; /* 100vh 代表全屏高度 */
+}

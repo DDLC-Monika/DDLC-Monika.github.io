@@ -1,0 +1,279 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>照片墙 | Sakuya的算法基地</title><meta name="author" content="Sakuya_maid"><meta name="copyright" content="Sakuya_maid"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2024.5.26 CCPC济南邀请赛 和 flaranis 和 qixian   2024.6.3 江西省省赛和 flaranis 和 wida 当队友 被霁子姐姐带着在南昌一起玩了 还面积了工口发动机大神 和 jz 大神 和一直帮助我的 mjj 大神    2024 .10.13 湖南省省赛和 svemit 和 TLEer   2025.1.15 PKU WC 和 only 和 lyy 面积了">
+<meta property="og:type" content="article">
+<meta property="og:title" content="照片墙">
+<meta property="og:url" content="http://example.com/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/index.html">
+<meta property="og:site_name" content="Sakuya的算法基地">
+<meta property="og:description" content="2024.5.26 CCPC济南邀请赛 和 flaranis 和 qixian   2024.6.3 江西省省赛和 flaranis 和 wida 当队友 被霁子姐姐带着在南昌一起玩了 还面积了工口发动机大神 和 jz 大神 和一直帮助我的 mjj 大神    2024 .10.13 湖南省省赛和 svemit 和 TLEer   2025.1.15 PKU WC 和 only 和 lyy 面积了">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/img/007.jpg">
+<meta property="article:published_time" content="2026-01-29T12:43:23.000Z">
+<meta property="article:modified_time" content="2026-01-29T13:32:35.693Z">
+<meta property="article:author" content="Sakuya_maid">
+<meta property="article:tag" content="简介">
+<meta property="article:tag" content="ACM">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/img/007.jpg"><script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "照片墙",
+  "url": "http://example.com/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/",
+  "image": "http://example.com/img/007.jpg",
+  "datePublished": "2026-01-29T12:43:23.000Z",
+  "dateModified": "2026-01-29T13:32:35.693Z",
+  "author": [
+    {
+      "@type": "Person",
+      "name": "Sakuya_maid",
+      "url": "http://example.com"
+    }
+  ]
+}</script><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="http://example.com/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.4-b1"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+    (() => {
+      
+    const saveToLocal = {
+      set: (key, value, ttl) => {
+        if (!ttl) return
+        const expiry = Date.now() + ttl * 86400000
+        localStorage.setItem(key, JSON.stringify({ value, expiry }))
+      },
+      get: key => {
+        const itemStr = localStorage.getItem(key)
+        if (!itemStr) return undefined
+        const { value, expiry } = JSON.parse(itemStr)
+        if (Date.now() > expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return value
+      }
+    }
+
+    window.btf = {
+      saveToLocal,
+      getScript: (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        Object.entries(attr).forEach(([key, val]) => script.setAttribute(key, val))
+        script.onload = script.onreadystatechange = () => {
+          if (!script.readyState || /loaded|complete/.test(script.readyState)) resolve()
+        }
+        script.onerror = reject
+        document.head.appendChild(script)
+      }),
+      getCSS: (url, id) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onload = link.onreadystatechange = () => {
+          if (!link.readyState || /loaded|complete/.test(link.readyState)) resolve()
+        }
+        link.onerror = reject
+        document.head.appendChild(link)
+      }),
+      addGlobalFn: (key, fn, name = false, parent = window) => {
+        if (!false && key.startsWith('pjax')) return
+        const globalFn = parent.globalFn || {}
+        globalFn[key] = globalFn[key] || {}
+        globalFn[key][name || Object.keys(globalFn[key]).length] = fn
+        parent.globalFn = globalFn
+      }
+    }
+  
+      
+      const activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      const activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+
+      btf.activateDarkMode = activateDarkMode
+      btf.activateLightMode = activateLightMode
+
+      const theme = saveToLocal.get('theme')
+    
+          theme === 'dark' ? activateDarkMode() : theme === 'light' ? activateLightMode() : null
+        
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        document.documentElement.classList.toggle('hide-aside', asideStatus === 'hide')
+      }
+    
+      
+    const detectApple = () => {
+      if (/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)) {
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+  
+    })()
+  </script><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false,"highlightFullpage":false,"highlightMacStyle":false},
+  copy: {
+    success: '复制成功',
+    error: '复制失败',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'null',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid@4.12.0/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyloadPlugin: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '照片墙',
+  isHighlightShrink: false,
+  isToc: true,
+  pageType: 'post'
+}</script><link rel="stylesheet" href="/css/custom.css"><meta name="generator" content="Hexo 7.3.0"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url(/img/1f33d5d68b634ac02d9fda701256f04a.png#%20%E5%BB%BA%E8%AE%AE%E6%8D%A2%E6%88%90%E4%B8%80%E5%BC%A0%E4%BA%8C%E6%AC%A1%E5%85%83%E9%A3%8E%E6%A0%BC%E7%9A%84%E6%B5%81%E7%BD%91%E7%BB%9C%E5%9B%BE);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">Sakuya的算法基地</span></a><a class="nav-page-title" href="/"><span class="site-name">照片墙</span><span class="site-name"><i class="fa-solid fa-circle-arrow-left"></i><span>  返回首页</span></span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">照片墙</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2026-01-29T12:43:23.000Z" title="发表于 2026-01-29 20:43:23">2026-01-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2026-01-29T13:32:35.693Z" title="更新于 2026-01-29 21:32:35">2026-01-29</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/">个人介绍</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h3 id="2024-5-26-CCPC济南邀请赛-和-flaranis-和-qixian"><a href="#2024-5-26-CCPC济南邀请赛-和-flaranis-和-qixian" class="headerlink" title="2024.5.26 CCPC济南邀请赛 和 flaranis 和 qixian"></a>2024.5.26 CCPC济南邀请赛 和 flaranis 和 qixian</h3><p><img src="/images/7c5bdfc96a358d6d4af83905b9b65100.jpg" alt="img"></p>
+<p><img src="/images/bb770c35edbbca0e478c17403bfacfa7.jpg" alt="img"></p>
+<p><img src="/images/caaa5f32523a80fa624ed5e357d567bf.jpg" alt="img"></p>
+<h3 id="2024-6-3-江西省省赛和-flaranis-和-wida-当队友-被霁子姐姐带着在南昌一起玩了-还面积了工口发动机大神-和-jz-大神-和一直帮助我的-mjj-大神"><a href="#2024-6-3-江西省省赛和-flaranis-和-wida-当队友-被霁子姐姐带着在南昌一起玩了-还面积了工口发动机大神-和-jz-大神-和一直帮助我的-mjj-大神" class="headerlink" title="2024.6.3 江西省省赛和 flaranis 和 wida 当队友 被霁子姐姐带着在南昌一起玩了 还面积了工口发动机大神 和 jz 大神 和一直帮助我的 mjj 大神"></a>2024.6.3 江西省省赛和 flaranis 和 wida 当队友 被霁子姐姐带着在南昌一起玩了 还面积了工口发动机大神 和 jz 大神 和一直帮助我的 mjj 大神</h3><p><img src="/images/138cd01096ef4b8d41eb4ef73f903d34.jpg" alt="img"></p>
+<p><img src="/images/917c29a844c9587b4a2471f3d95740c1.jpg" alt="img"></p>
+<p><img src="/images/b8f99cee7ec29f6c074e7f80c03c0991.jpg" alt="img"></p>
+<p><img src="/images/3676875b4c58172d940f28f398b14588.jpg" alt="img"></p>
+<h3 id="2024-10-13-湖南省省赛和-svemit-和-TLEer"><a href="#2024-10-13-湖南省省赛和-svemit-和-TLEer" class="headerlink" title="2024 .10.13 湖南省省赛和 svemit 和 TLEer"></a>2024 .10.13 湖南省省赛和 svemit 和 TLEer</h3><p><img src="/images/5e4be86a64dcfdbca290e92e2421e4ad.jpg" alt="img"></p>
+<p><img src="/images/547f9f2647787352a85ba1af40f7da42.jpg" alt="img"></p>
+<p><img src="/images/ed26784ceffb4afb2e968735b7913f5a.jpg" alt="img"></p>
+<h3 id="2025-1-15-PKU-WC-和-only-和-lyy-面积了"><a href="#2025-1-15-PKU-WC-和-only-和-lyy-面积了" class="headerlink" title="2025.1.15 PKU WC 和 only 和 lyy 面积了"></a>2025.1.15 PKU WC 和 only 和 lyy 面积了</h3><p><img src="/images/11a2e8550f28dd25b92bf753746c8b6a.jpg" alt="img"></p>
+<p><img src="/images/d09a2dd22f8181b7253505044cc789d0.jpg" alt="img"></p>
+<h3 id="2025-2-5-和来杭州玩的好兄弟-lff-一起玩"><a href="#2025-2-5-和来杭州玩的好兄弟-lff-一起玩" class="headerlink" title="2025.2.5 和来杭州玩的好兄弟 lff 一起玩"></a>2025.2.5 和来杭州玩的好兄弟 lff 一起玩</h3><p><img src="/images/d6ed496f35d27c47046e95313a78be7f.jpg" alt="img"></p>
+<h3 id="2025-5-12-陕西省省赛-和猫粮和李哥一起组队"><a href="#2025-5-12-陕西省省赛-和猫粮和李哥一起组队" class="headerlink" title="2025.5.12 陕西省省赛 和猫粮和李哥一起组队"></a>2025.5.12 陕西省省赛 和猫粮和李哥一起组队</h3><p><img src="/images/913bfb06194c1a8fbd4c5debecb1ad3f.jpg" alt="img"></p>
+<p><img src="/images/7cc29854babfd2a67cdd5ebde9ad2882.jpg" alt="img"></p>
+<h3 id="2025-5-18-ICPC南昌邀请赛-和兔和-52hz-，和-urt-至圣他们一起吃饭"><a href="#2025-5-18-ICPC南昌邀请赛-和兔和-52hz-，和-urt-至圣他们一起吃饭" class="headerlink" title="2025.5.18 ICPC南昌邀请赛 和兔和 52hz ，和 urt 至圣他们一起吃饭"></a>2025.5.18 ICPC南昌邀请赛 和兔和 52hz ，和 urt 至圣他们一起吃饭</h3><p><img src="/images/29d24986a243a4e5a4c6b96d7516ebd9.jpg" alt="img"></p>
+<p><img src="/images/f501c7f5a71dc29af25e2bacb9f96263.jpg" alt="img"></p>
+<p><img src="/images/b2b220968d2e6d4e2edd3bd62b4bc522.jpg" alt="img"></p>
+<p><img src="/images/4137eeccf10520410282a4e6e397b666.jpg" alt="img"></p>
+<h3 id="2025-5-28-山东省省赛-和-urt-和-兔-一起"><a href="#2025-5-28-山东省省赛-和-urt-和-兔-一起" class="headerlink" title="2025.5.28 山东省省赛 和 urt 和 兔 一起"></a>2025.5.28 山东省省赛 和 urt 和 兔 一起</h3><p><img src="/images/ca1235fc99345d0a10581533fc3a076f.jpg" alt="img"></p>
+<p><img src="/images/8c8ca509512092a6976f5084f5b270a3.jpg" alt="img"></p>
+<h3 id="2025-6-3-江苏省省赛-和-flaranis-和-masttf"><a href="#2025-6-3-江苏省省赛-和-flaranis-和-masttf" class="headerlink" title="2025.6.3 江苏省省赛 和 flaranis 和 masttf"></a>2025.6.3 江苏省省赛 和 flaranis 和 masttf</h3><p><img src="/images/535c1295c528c0539b81a252802e4a57.jpg" alt="img"></p>
+<p><img src="/images/ca2aa404a671b3638410dbd7c8b70b58.jpg" alt="img"></p>
+<h3 id="2025-8-4-namomo集训营-和-jiangly合影-和-paqi-和-urt-一起住"><a href="#2025-8-4-namomo集训营-和-jiangly合影-和-paqi-和-urt-一起住" class="headerlink" title="2025.8.4 namomo集训营 和 jiangly合影 和 paqi 和 urt 一起住"></a>2025.8.4 namomo集训营 和 jiangly合影 和 paqi 和 urt 一起住</h3><p><img src="/images/2748242d1b42d6fb9f785446ffc8690c.jpg" alt="img"></p>
+<p><img src="/images/839f265a2f68aa05dbd07e12529392af.jpg" alt="img"></p>
+<p><img src="/images/8a94f418e4dc966e5d753775657d4a5a.jpg" alt="img"></p>
+<p><img src="/images/a0c9eba02bca25d644e87a11b471a24c.jpg" alt="img"></p>
+<h3 id="2025-9-13-没打CCPC南昌邀请赛-挂的教练-猫粮-，至圣和昊哥组三人队伍，还和在我的算法竞赛生涯起步阶段帮了我很多的-honey-宝贝合影了-和-y-kx-b-宝贝面积了"><a href="#2025-9-13-没打CCPC南昌邀请赛-挂的教练-猫粮-，至圣和昊哥组三人队伍，还和在我的算法竞赛生涯起步阶段帮了我很多的-honey-宝贝合影了-和-y-kx-b-宝贝面积了" class="headerlink" title="2025.9.13 没打CCPC南昌邀请赛 挂的教练 猫粮 ，至圣和昊哥组三人队伍，还和在我的算法竞赛生涯起步阶段帮了我很多的 honey 宝贝合影了 和 y=kx+b 宝贝面积了"></a>2025.9.13 没打CCPC南昌邀请赛 挂的教练 猫粮 ，至圣和昊哥组三人队伍，还和在我的算法竞赛生涯起步阶段帮了我很多的 honey 宝贝合影了 和 y=kx+b 宝贝面积了</h3><p><img src="/images/2742d9fe232dc0de7858ff531cdbdc33.jpg" alt="img"></p>
+<p><img src="/images/aced813cf7d3d807abd66be5d9181b8a.jpg" alt="img"></p>
+<p><img src="/images/111.jpg" alt="img"></p>
+<h3 id="2025-11-2-ICPC武汉站"><a href="#2025-11-2-ICPC武汉站" class="headerlink" title="2025.11.2 ICPC武汉站"></a>2025.11.2 ICPC武汉站</h3><h3 id="和-猫粮-和-李哥组的队伍-，和urt-，至圣，小透明组的队伍一起的吃饭，赛前还和-NTT-面积了，赛后和-yorisou，hgs大神合影了"><a href="#和-猫粮-和-李哥组的队伍-，和urt-，至圣，小透明组的队伍一起的吃饭，赛前还和-NTT-面积了，赛后和-yorisou，hgs大神合影了" class="headerlink" title="和 猫粮 和 李哥组的队伍 ，和urt ，至圣，小透明组的队伍一起的吃饭，赛前还和 NTT 面积了，赛后和 yorisou，hgs大神合影了"></a>和 猫粮 和 李哥组的队伍 ，和urt ，至圣，小透明组的队伍一起的吃饭，赛前还和 NTT 面积了，赛后和 yorisou，hgs大神合影了</h3><p><img src="/images/c63b7ae7f9cd260c71eb82e893d6076d.jpg" alt="img"></p>
+<p><img src="/images/1705ace436e5dd46b4339434b524c777.jpg" alt="img"></p>
+<p><img src="/images/c3f612e69b9078a5855175958cf2847b.jpg" alt="img"></p>
+<p><img src="/images/4dcf207c2b82eb382a9daaf9e6cac61f.jpg" alt="img"></p>
+<p><img src="/images/c273e6515b1d078785f8a04282ccc649.jpg" alt="img"></p>
+<h3 id="2025-11-18-CCPC济南站-和-starsilk猫猫合影了"><a href="#2025-11-18-CCPC济南站-和-starsilk猫猫合影了" class="headerlink" title="2025.11.18 CCPC济南站 和 starsilk猫猫合影了"></a>2025.11.18 CCPC济南站 和 starsilk猫猫合影了</h3><p><img src="/images/0199b44c48cdee7d9c9e7fcd2be040fc.jpg" alt="img"></p>
+<p><img src="/images/87ce80e7cf8041004741731af9805ead.jpg" alt="img"></p>
+<p>2025.11.24 ICPC上海站 和 猫粮 芙兰 琪露诺 灵梦合影吃饭了</p>
+<p><img src="/images/fae150ea0665ed5b8f7a041d3efb2eb4.jpg" alt="img"></p>
+<p><img src="/images/6653665d383bbbe702199b759b94a09e.jpg" alt="img"></p>
+<h3 id="2025-12-8-北京百度之星决赛-个人赛-赛后和李哥-风铃-一起吃饭了-可惜没合影"><a href="#2025-12-8-北京百度之星决赛-个人赛-赛后和李哥-风铃-一起吃饭了-可惜没合影" class="headerlink" title="2025.12.8 北京百度之星决赛 个人赛 赛后和李哥 风铃 一起吃饭了 可惜没合影"></a>2025.12.8 北京百度之星决赛 个人赛 赛后和李哥 风铃 一起吃饭了 可惜没合影</h3><p><img src="/images/2cadaae0e5ec1e633f0dfcbfbc83902b.jpg" alt="img"></p>
+<p><img src="/images/a47bd4ce6a6dcdbc04c80f91674f3203.jpg" alt="img"></p>
+<h1 id="我的算法竞赛生涯还没有结束"><a href="#我的算法竞赛生涯还没有结束" class="headerlink" title="我的算法竞赛生涯还没有结束"></a>我的算法竞赛生涯还没有结束</h1></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://example.com">Sakuya_maid</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://example.com/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/">http://example.com/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://example.com" target="_blank">Sakuya的算法基地</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%AE%80%E4%BB%8B/">简介</a><a class="post-meta__tags" href="/tags/ACM/">ACM</a></div><div class="post-share"><div class="social-share" data-image="/img/007.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related" href="/2026/02/03/2026EC-final%E6%B8%B8%E8%AE%B0/" title="2026EC-final游记"><img class="cover" src="/img/021.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2026EC-final游记</div></div><div class="info-2"><div class="info-item-1">来EC-final玩了 也是住了两天白金汉爵酒店 ，和中山大学的lzqy_大神，小波大神，fquaz07大神，agkc大神和空気力学の詩大神面基并给了徽章，和Automaton大神一起吃了华为晚宴，走前还遇到了芙兰大神，刚好再次合影一张，才发现和前面的大佬忘记合照了，最后又被好兄弟们一起叫去ktv唱歌了，这两天和身边的朋友一起度过，过得非常愉快感觉我认识的打算法竞赛的朋友们都是非常有智慧的人，总能在沟通中给到我在不同方面新的启发，我觉得沟通带来的愉快感远远大于游戏带来的愉快感最近才发现，算法竞赛可以是一个桥梁，能在每年把天南海北的朋友们叫到一起相聚，而且这个时间可以持续数十年，我觉得这是一件非常有意义的事情下学期的邀请赛期待继续和朋友们一起玩                           </div></div></div></a><a class="pagination-related" href="/2026/01/20/C++%E9%87%8C%E9%9D%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E6%89%8B%E6%90%93/" title="C++里面常用的函数手搓"><img class="cover" src="/img/004.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="info text-right"><div class="info-1"><div class="info-item-1">下一篇</div><div class="info-item-2">C++里面常用的函数手搓</div></div><div class="info-2"><div class="info-item-1">假设 a 已经被定义为一个指针（例如 int* a）。在这种情况下： a：是地址（它存储了另一个变量的内存地址）。 *a：是值（它去访问 a 中存储的那个地址里的数据，这叫“解引用”）。 &amp;a：是指针自己的地址（指针变量本身也需要占用内存，这是存放指针变量的地方）  strcpy：123456789101112131415161718192021222324252627#include &lt;bits/stdc++.h&gt;char* my_strcpy(char* res, const char* aim)&#123;    assert(res != nullptr &amp;&amp; aim != nullptr);    char* now = res;    while(true)&#123;        char cnt = *aim;        *res = cnt;        res ++;        aim ++;        if(cnt == &#x27;\0&#x27;)break;    &#125;    return n...</div></div></div></a></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2023/10/27/%E4%B8%AA%E4%BA%BA%E4%BB%8B%E7%BB%8D/" title="个人介绍"><img class="cover" src="/img/006.jpg" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2023-10-27</div><div class="info-item-2">个人介绍</div></div><div class="info-2"><div class="info-item-1">生日：2004.8.7    QQ：1831944862洛谷：Sakuya_maid - 个人中心 - 洛谷Codeforces：Sakuya_maid - Codeforces牛客：Sakuya_maid的比赛主页Atcoder：Sakuya_maid - AtCoder知乎：Sakuyamaid - 知乎BILIBILI：Sakuya_maid的个人空间 题单：Sakuya的题单 已经很久没整理了 后续做的好多题没放进去我好想把所有我会的对应知识点都整理一个我做过的对应的题详细的分类和具体解析但是到现在也只做了网络流的 ，其他的只做了部分题单整理下面是板子整理：点双/圆方树：点双/圆方树 强连通分量：强连通分量 筛质数：筛质数 自动取模：自动取模 高精度：高精度 简单组合数：组合数 拉格朗日插值：拉插 线性逆元：线性逆元 ST表：ST表板子 ST建的笛卡尔树：笛卡尔树 ST建的dfs序O1LCA：O1LCA 边上树剖板子（边剖分）：边上树剖 SA板子：后缀数组 最大流：最大流 费用流：费用流 Set模拟的模拟费用流：模拟费用流 有源汇上下界最大流： 有/无源汇上下界可行/最大...</div></div></div></a><a class="pagination-related" href="/2024/10/03/%E7%BD%91%E7%BB%9C%E6%B5%81%E4%B8%93%E9%A2%98/" title="网络流学习记录"><img class="cover" src="/img/1f33d5d68b634ac02d9fda701256f04a.png" alt="cover"><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2024-10-03</div><div class="info-item-2">网络流学习记录</div></div><div class="info-2"><div class="info-item-1">1. 行列建图因为行列的约束关系，即一次操作可以同时满足两者，对行到列建边后跑最大流即为最小代价。 洛谷 P6931这题要求满足符合原本三视图的视角情况下，移走尽可能多的箱子。  按照俯视图，可以把 $\ge 1$ 的箱子移到只剩下一个箱子，这是满足俯视图的情况。 侧视图和主视图可以通过对行和列取 $\max$ 求得。  一个很自然的想法是就留下这些箱子，其他全部移走，但是其实还能优化。就是一个柱子所在的行和所在的列如果高度一样的时候，可以不需要两根柱子，又能移走他们的一座高度。这里建图就是在俯视图那个位置有箱子的情况下，并且那个位置的侧视图和主视图高度一样的情况下，可以把 $i$ 作为二分图的左部点，$j$ 作为二分图的右部点，跑出来的最大流就是可以继续移走的箱子。 洛谷 P2825这题和上题一样，也是炸弹可以炸到行和列，和上一题关键柱子占了行和列是一模一样的，都是要求尽可能多，行对列建图后跑最大流即可。 洛谷 P7368这题也是，消除某一行或者某一列都可以达成目标，即在对行列建完二分图后将题目要求转为求最小割，中间连 $INF$ 的点确保不会被割即可。  2. 基于整体关系转...</div></div></div></a></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/jk.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Sakuya_maid</div><div class="author-info-description">ACMer / 二次元 / 莫妮卡厨 / 车万</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">17</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">16</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">5</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/DDLC-Monika"><i class="fab fa-github"></i><span>Follow Me</span></a></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">This is my Blog</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#2024-5-26-CCPC%E6%B5%8E%E5%8D%97%E9%82%80%E8%AF%B7%E8%B5%9B-%E5%92%8C-flaranis-%E5%92%8C-qixian"><span class="toc-number">1.</span> <span class="toc-text">2024.5.26 CCPC济南邀请赛 和 flaranis 和 qixian</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2024-6-3-%E6%B1%9F%E8%A5%BF%E7%9C%81%E7%9C%81%E8%B5%9B%E5%92%8C-flaranis-%E5%92%8C-wida-%E5%BD%93%E9%98%9F%E5%8F%8B-%E8%A2%AB%E9%9C%81%E5%AD%90%E5%A7%90%E5%A7%90%E5%B8%A6%E7%9D%80%E5%9C%A8%E5%8D%97%E6%98%8C%E4%B8%80%E8%B5%B7%E7%8E%A9%E4%BA%86-%E8%BF%98%E9%9D%A2%E7%A7%AF%E4%BA%86%E5%B7%A5%E5%8F%A3%E5%8F%91%E5%8A%A8%E6%9C%BA%E5%A4%A7%E7%A5%9E-%E5%92%8C-jz-%E5%A4%A7%E7%A5%9E-%E5%92%8C%E4%B8%80%E7%9B%B4%E5%B8%AE%E5%8A%A9%E6%88%91%E7%9A%84-mjj-%E5%A4%A7%E7%A5%9E"><span class="toc-number">2.</span> <span class="toc-text">2024.6.3 江西省省赛和 flaranis 和 wida 当队友 被霁子姐姐带着在南昌一起玩了 还面积了工口发动机大神 和 jz 大神 和一直帮助我的 mjj 大神</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2024-10-13-%E6%B9%96%E5%8D%97%E7%9C%81%E7%9C%81%E8%B5%9B%E5%92%8C-svemit-%E5%92%8C-TLEer"><span class="toc-number">3.</span> <span class="toc-text">2024 .10.13 湖南省省赛和 svemit 和 TLEer</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-1-15-PKU-WC-%E5%92%8C-only-%E5%92%8C-lyy-%E9%9D%A2%E7%A7%AF%E4%BA%86"><span class="toc-number">4.</span> <span class="toc-text">2025.1.15 PKU WC 和 only 和 lyy 面积了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-2-5-%E5%92%8C%E6%9D%A5%E6%9D%AD%E5%B7%9E%E7%8E%A9%E7%9A%84%E5%A5%BD%E5%85%84%E5%BC%9F-lff-%E4%B8%80%E8%B5%B7%E7%8E%A9"><span class="toc-number">5.</span> <span class="toc-text">2025.2.5 和来杭州玩的好兄弟 lff 一起玩</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-5-12-%E9%99%95%E8%A5%BF%E7%9C%81%E7%9C%81%E8%B5%9B-%E5%92%8C%E7%8C%AB%E7%B2%AE%E5%92%8C%E6%9D%8E%E5%93%A5%E4%B8%80%E8%B5%B7%E7%BB%84%E9%98%9F"><span class="toc-number">6.</span> <span class="toc-text">2025.5.12 陕西省省赛 和猫粮和李哥一起组队</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-5-18-ICPC%E5%8D%97%E6%98%8C%E9%82%80%E8%AF%B7%E8%B5%9B-%E5%92%8C%E5%85%94%E5%92%8C-52hz-%EF%BC%8C%E5%92%8C-urt-%E8%87%B3%E5%9C%A3%E4%BB%96%E4%BB%AC%E4%B8%80%E8%B5%B7%E5%90%83%E9%A5%AD"><span class="toc-number">7.</span> <span class="toc-text">2025.5.18 ICPC南昌邀请赛 和兔和 52hz ，和 urt 至圣他们一起吃饭</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-5-28-%E5%B1%B1%E4%B8%9C%E7%9C%81%E7%9C%81%E8%B5%9B-%E5%92%8C-urt-%E5%92%8C-%E5%85%94-%E4%B8%80%E8%B5%B7"><span class="toc-number">8.</span> <span class="toc-text">2025.5.28 山东省省赛 和 urt 和 兔 一起</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-6-3-%E6%B1%9F%E8%8B%8F%E7%9C%81%E7%9C%81%E8%B5%9B-%E5%92%8C-flaranis-%E5%92%8C-masttf"><span class="toc-number">9.</span> <span class="toc-text">2025.6.3 江苏省省赛 和 flaranis 和 masttf</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-8-4-namomo%E9%9B%86%E8%AE%AD%E8%90%A5-%E5%92%8C-jiangly%E5%90%88%E5%BD%B1-%E5%92%8C-paqi-%E5%92%8C-urt-%E4%B8%80%E8%B5%B7%E4%BD%8F"><span class="toc-number">10.</span> <span class="toc-text">2025.8.4 namomo集训营 和 jiangly合影 和 paqi 和 urt 一起住</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-9-13-%E6%B2%A1%E6%89%93CCPC%E5%8D%97%E6%98%8C%E9%82%80%E8%AF%B7%E8%B5%9B-%E6%8C%82%E7%9A%84%E6%95%99%E7%BB%83-%E7%8C%AB%E7%B2%AE-%EF%BC%8C%E8%87%B3%E5%9C%A3%E5%92%8C%E6%98%8A%E5%93%A5%E7%BB%84%E4%B8%89%E4%BA%BA%E9%98%9F%E4%BC%8D%EF%BC%8C%E8%BF%98%E5%92%8C%E5%9C%A8%E6%88%91%E7%9A%84%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%94%9F%E6%B6%AF%E8%B5%B7%E6%AD%A5%E9%98%B6%E6%AE%B5%E5%B8%AE%E4%BA%86%E6%88%91%E5%BE%88%E5%A4%9A%E7%9A%84-honey-%E5%AE%9D%E8%B4%9D%E5%90%88%E5%BD%B1%E4%BA%86-%E5%92%8C-y-kx-b-%E5%AE%9D%E8%B4%9D%E9%9D%A2%E7%A7%AF%E4%BA%86"><span class="toc-number">11.</span> <span class="toc-text">2025.9.13 没打CCPC南昌邀请赛 挂的教练 猫粮 ，至圣和昊哥组三人队伍，还和在我的算法竞赛生涯起步阶段帮了我很多的 honey 宝贝合影了 和 y&#x3D;kx+b 宝贝面积了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-11-2-ICPC%E6%AD%A6%E6%B1%89%E7%AB%99"><span class="toc-number">12.</span> <span class="toc-text">2025.11.2 ICPC武汉站</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%92%8C-%E7%8C%AB%E7%B2%AE-%E5%92%8C-%E6%9D%8E%E5%93%A5%E7%BB%84%E7%9A%84%E9%98%9F%E4%BC%8D-%EF%BC%8C%E5%92%8Curt-%EF%BC%8C%E8%87%B3%E5%9C%A3%EF%BC%8C%E5%B0%8F%E9%80%8F%E6%98%8E%E7%BB%84%E7%9A%84%E9%98%9F%E4%BC%8D%E4%B8%80%E8%B5%B7%E7%9A%84%E5%90%83%E9%A5%AD%EF%BC%8C%E8%B5%9B%E5%89%8D%E8%BF%98%E5%92%8C-NTT-%E9%9D%A2%E7%A7%AF%E4%BA%86%EF%BC%8C%E8%B5%9B%E5%90%8E%E5%92%8C-yorisou%EF%BC%8Chgs%E5%A4%A7%E7%A5%9E%E5%90%88%E5%BD%B1%E4%BA%86"><span class="toc-number">13.</span> <span class="toc-text">和 猫粮 和 李哥组的队伍 ，和urt ，至圣，小透明组的队伍一起的吃饭，赛前还和 NTT 面积了，赛后和 yorisou，hgs大神合影了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-11-18-CCPC%E6%B5%8E%E5%8D%97%E7%AB%99-%E5%92%8C-starsilk%E7%8C%AB%E7%8C%AB%E5%90%88%E5%BD%B1%E4%BA%86"><span class="toc-number">14.</span> <span class="toc-text">2025.11.18 CCPC济南站 和 starsilk猫猫合影了</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2025-12-8-%E5%8C%97%E4%BA%AC%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E5%86%B3%E8%B5%9B-%E4%B8%AA%E4%BA%BA%E8%B5%9B-%E8%B5%9B%E5%90%8E%E5%92%8C%E6%9D%8E%E5%93%A5-%E9%A3%8E%E9%93%83-%E4%B8%80%E8%B5%B7%E5%90%83%E9%A5%AD%E4%BA%86-%E5%8F%AF%E6%83%9C%E6%B2%A1%E5%90%88%E5%BD%B1"><span class="toc-number">15.</span> <span class="toc-text">2025.12.8 北京百度之星决赛 个人赛 赛后和李哥 风铃 一起吃饭了 可惜没合影</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%88%91%E7%9A%84%E7%AE%97%E6%B3%95%E7%AB%9E%E8%B5%9B%E7%94%9F%E6%B6%AF%E8%BF%98%E6%B2%A1%E6%9C%89%E7%BB%93%E6%9D%9F"><span class="toc-number"></span> <span class="toc-text">我的算法竞赛生涯还没有结束</span></a></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2026/02/03/2026EC-final%E6%B8%B8%E8%AE%B0/" title="2026EC-final游记"><img src="/img/021.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2026EC-final游记"/></a><div class="content"><a class="title" href="/2026/02/03/2026EC-final%E6%B8%B8%E8%AE%B0/" title="2026EC-final游记">2026EC-final游记</a><time datetime="2026-02-03T09:49:45.000Z" title="发表于 2026-02-03 17:49:45">2026-02-03</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/" title="照片墙"><img src="/img/007.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="照片墙"/></a><div class="content"><a class="title" href="/2026/01/29/%E7%85%A7%E7%89%87%E5%A2%99/" title="照片墙">照片墙</a><time datetime="2026-01-29T12:43:23.000Z" title="发表于 2026-01-29 20:43:23">2026-01-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/20/C++%E9%87%8C%E9%9D%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E6%89%8B%E6%90%93/" title="C++里面常用的函数手搓"><img src="/img/004.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="C++里面常用的函数手搓"/></a><div class="content"><a class="title" href="/2026/01/20/C++%E9%87%8C%E9%9D%A2%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0%E6%89%8B%E6%90%93/" title="C++里面常用的函数手搓">C++里面常用的函数手搓</a><time datetime="2026-01-20T13:22:11.000Z" title="发表于 2026-01-20 21:22:11">2026-01-20</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2026/01/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" title="CF1107F Vasya and Endless Credits 题解"><img src="/img/df0b4c5eb607b0c10b1c47a4076ea836.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="CF1107F Vasya and Endless Credits 题解"/></a><div class="content"><a class="title" href="/2026/01/16/%E7%AC%AC%E4%B8%80%E7%AF%87%E7%AE%97%E6%B3%95%E9%A2%98%E8%A7%A3/" title="CF1107F Vasya and Endless Credits 题解">CF1107F Vasya and Endless Credits 题解</a><time datetime="2026-01-16T02:00:00.000Z" title="发表于 2026-01-16 10:00:00">2026-01-16</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2025/12/09/2025%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E5%86%B3%E8%B5%9B%E6%B8%B8%E8%AE%B0/" title="2025百度之星决赛游记"><img src="/img/002.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="2025百度之星决赛游记"/></a><div class="content"><a class="title" href="/2025/12/09/2025%E7%99%BE%E5%BA%A6%E4%B9%8B%E6%98%9F%E5%86%B3%E8%B5%9B%E6%B8%B8%E8%AE%B0/" title="2025百度之星决赛游记">2025百度之星决赛游记</a><time datetime="2025-12-09T09:49:45.000Z" title="发表于 2025-12-09 17:49:45">2025-12-09</time></div></div></div></div></div></div></main><footer id="footer"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 - 2026 By Sakuya_maid</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.3.0</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.4-b1</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.4-b1"></script><script src="/js/main.js?v=5.5.4-b1"></script><div class="js-pjax"><script>(() => {
+  const loadMathjax = () => {
+    if (!window.MathJax) {
+      window.MathJax = {
+        loader: {
+          load: [
+            // Four font extension packages (optional)
+            //- '[tex]/bbm',
+            //- '[tex]/bboldx',
+            //- '[tex]/dsfont',
+            '[tex]/mhchem'
+          ],
+          paths: {
+            'mathjax-newcm': '[mathjax]/../@mathjax/mathjax-newcm-font',
+
+            //- // Four font extension packages (optional)
+            //- 'mathjax-bbm-extension': '[mathjax]/../@mathjax/mathjax-bbm-font-extension',
+            //- 'mathjax-bboldx-extension': '[mathjax]/../@mathjax/mathjax-bboldx-font-extension',
+            //- 'mathjax-dsfont-extension': '[mathjax]/../@mathjax/mathjax-dsfont-font-extension',
+            'mathjax-mhchem-extension': '[mathjax]/../@mathjax/mathjax-mhchem-font-extension'
+          }
+        },
+        output: {
+          font: 'mathjax-newcm',
+        },
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          tags: 'none',
+          packages: {
+            '[+]': [
+              'mhchem'
+            ]
+          }
+        },
+        chtml: {
+          scale: 1.1
+        },
+        options: {
+          enableMenu: true,
+          menuOptions: {
+            settings: {
+              enrich: false  // Turn off Braille and voice narration text automatic generation
+            }
+          },
+          renderActions: {
+            findScript: [10, doc => {
+              for (const node of document.querySelectorAll('script[type^="math/tex"]')) {
+                const display = !!node.type.match(/; *mode=display/)
+                const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display)
+                const text = document.createTextNode('')
+                node.parentNode.replaceChild(text, node)
+                math.start = {node: text, delim: '', n: 0}
+                math.end = {node: text, delim: '', n: 0}
+                doc.math.push(math)
+              }
+            }, '']
+          }
+        }
+      }
+
+      const script = document.createElement('script')
+      script.src = 'https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.min.js'
+      script.id = 'MathJax-script'
+      script.async = true
+      document.head.appendChild(script)
+    } else {
+      MathJax.startup.document.state(0)
+      MathJax.texReset()
+      MathJax.typesetPromise()
+    }
+  }
+
+  btf.addGlobalFn('encrypt', loadMathjax, 'mathjax')
+  window.pjax ? loadMathjax() : window.addEventListener('load', loadMathjax)
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
